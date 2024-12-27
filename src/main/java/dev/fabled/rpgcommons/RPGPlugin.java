@@ -1,12 +1,7 @@
 package dev.fabled.rpgcommons;
 
-import dev.fabled.rpgcommons.configuration.YamlConfig;
-import dev.fabled.rpgcommons.logging.PluginLog;
-import org.jetbrains.annotations.NotNull;
+import org.bukkit.plugin.java.JavaPlugin;
 
-public interface RPGPlugin {
-
-    @NotNull YamlConfig getConfigYml();
-    @NotNull PluginLog getPluginLog();
+public abstract non-sealed class RPGPlugin extends JavaPlugin implements RPGPluginInterface {
 
 }
