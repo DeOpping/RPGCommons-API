@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'com.gradleup.shadow' version '8.3.3'
+    id 'io.papermc.paperweight.userdev' version '2.0.0-beta.8'
+}
+
+group = 'dev.fabled'
+version = "${versionMajor}.${versionMinor}.${versionPatch}"
+if (snapshot == "true") {
+    version += "-SNAPSHOT-${buildNumber}"
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/' }
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    paperweight.paperDevBundle(paperDevBundleVersion)
+    compileOnly 'me.clip:placeholderapi:2.11.6'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
