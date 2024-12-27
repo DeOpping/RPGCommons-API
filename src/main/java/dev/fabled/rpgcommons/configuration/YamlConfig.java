@@ -24,4 +24,12 @@ public interface YamlConfig {
      */
     void reload();
 
+    /**
+     * Calls {@link YamlConfig#save()} then {@link YamlConfig#reload()}
+     */
+    default void onReload() {
+        save();
+        reload();
+    }
+
 }
