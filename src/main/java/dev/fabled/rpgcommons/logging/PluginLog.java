@@ -6,6 +6,10 @@ import java.util.List;
 
 public interface PluginLog {
 
+    void onReload();
+
+
+
     void info(final boolean debug, final @NotNull List<String> message);
 
     default void info(final boolean debug, final @NotNull String... message) {
