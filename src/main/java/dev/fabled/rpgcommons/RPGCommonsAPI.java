@@ -41,7 +41,7 @@ public interface RPGCommonsAPI {
      * Creates a {@link LocaleManager} for your plugin
      * @return {@link LocaleManager}
      */
-    @NotNull LocaleManager createLocaleManager();
+    @NotNull LocaleManager createLocaleManager(final @NotNull RPGPlugin plugin);
 
     /**
      * Creates a new {@link YamlConfig} from your resources or from the server
