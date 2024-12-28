@@ -12,9 +12,8 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Permission {
 
-    @NotNull String value();
     @NotNull String description() default "";
-    @NotNull PermissionDefault permissionDefault() default PermissionDefault.FALSE;
+    @NotNull PermissionDefault permissionDefault() default PermissionDefault.OP;
     @NotNull String[] children() default {""};
 
 }
