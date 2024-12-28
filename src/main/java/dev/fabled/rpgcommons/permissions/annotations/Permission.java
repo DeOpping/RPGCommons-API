@@ -14,7 +14,7 @@ public @interface Permission {
 
     @NotNull String description() default "";
     @NotNull PermissionDefault permissionDefault() default PermissionDefault.OP;
-    @NotNull String[] children() default {""};
+    @NotNull String[] children() default {};
 
 }
 
