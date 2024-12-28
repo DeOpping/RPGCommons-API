@@ -33,6 +33,13 @@ public interface RPGCommonsAPI {
     @NotNull YamlConfig createConfigYml(final @NotNull RPGPlugin plugin);
 
     /**
+     * Creates a <code>locale/groups.yml</code> for your plugin
+     * @param plugin Your main class that extends {@link RPGPlugin}
+     * @return {@link YamlConfig}
+     */
+    @NotNull YamlConfig createLocaleGroupsYml(final @NotNull RPGPlugin plugin);
+
+    /**
      * Creates a {@link PluginLog} for your plugin
      * @param plugin Your main class that extends {@link RPGPlugin}
      * @return {@link PluginLog}
