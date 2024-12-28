@@ -9,8 +9,8 @@ apply plugin: 'maven-publish'
 
 group = 'dev.fabled'
 version = "${versionMajor}.${versionMinor}.${versionPatch}"
-if (snapshot == "true") {
-    version += "-SNAPSHOT-${buildNumber}"
+if (hotfix == "true") {
+    version += "-HOTFIX-${versionHotfix}"
 }
 
 repositories {
