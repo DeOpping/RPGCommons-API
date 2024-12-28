@@ -26,7 +26,7 @@ public interface RPGCommonsAPI {
     }
 
     /**
-     * Creates a config.yml for your plugin
+     * Creates a <code>config.yml</code> for your plugin
      * @param plugin Your main class that extends {@link RPGPlugin}
      * @return {@link YamlConfig}
      */
