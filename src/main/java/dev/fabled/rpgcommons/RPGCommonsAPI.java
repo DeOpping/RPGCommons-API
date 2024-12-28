@@ -1,5 +1,6 @@
 package dev.fabled.rpgcommons;
 
+import dev.fabled.rpgcommons.commands.CommandManager;
 import dev.fabled.rpgcommons.configuration.YamlConfig;
 import dev.fabled.rpgcommons.locale.LocaleManager;
 import dev.fabled.rpgcommons.logging.PluginLog;
@@ -42,6 +43,13 @@ public interface RPGCommonsAPI {
      * @return {@link LocaleManager}
      */
     @NotNull LocaleManager createLocaleManager(final @NotNull RPGPlugin plugin);
+
+    /**
+     * Creates a {@link CommandManager} for your plugin
+     * @param plugin Your main class that extends {@link RPGPlugin}
+     * @return {@link CommandManager}
+     */
+    @NotNull CommandManager createCommandManager(final @NotNull RPGPlugin plugin);
 
     /**
      * Creates a new {@link YamlConfig} from your resources or from the server
