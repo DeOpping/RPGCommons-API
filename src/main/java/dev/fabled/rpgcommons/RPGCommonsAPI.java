@@ -4,6 +4,7 @@ import dev.fabled.rpgcommons.commands.CommandManager;
 import dev.fabled.rpgcommons.configuration.YamlConfig;
 import dev.fabled.rpgcommons.locale.LocaleManager;
 import dev.fabled.rpgcommons.logging.PluginLog;
+import dev.fabled.rpgcommons.permissions.PermissionManager;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.NotNull;
@@ -44,6 +45,13 @@ public interface RPGCommonsAPI {
      * @return {@link LocaleManager}
      */
     @NotNull LocaleManager createLocaleManager(final @NotNull RPGPlugin plugin);
+
+    /**
+     * Creates a {@link PermissionManager} for your plugin
+     * @param plugin Your main class that extends {@link RPGPlugin}
+     * @return {@link PermissionManager}
+     */
+    @NotNull PermissionManager createPermissionManager(final @NotNull RPGPlugin plugin);
 
     /**
      * Creates a {@link CommandManager} for your plugin
