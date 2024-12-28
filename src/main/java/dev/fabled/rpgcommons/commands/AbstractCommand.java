@@ -15,7 +15,7 @@ public abstract class AbstractCommand {
 
     protected final @NotNull String name;
     protected final @Nullable String description;
-    protected final @Nullable List<String> aliases;
+    protected final @NotNull List<String> aliases;
 
     public AbstractCommand(
             final @NotNull String name,
