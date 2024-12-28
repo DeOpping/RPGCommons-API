@@ -40,6 +40,7 @@ public interface RPGCommonsAPI {
 
     /**
      * Creates a {@link LocaleManager} for your plugin
+     * @param plugin Your main class that extends {@link RPGPlugin}
      * @return {@link LocaleManager}
      */
     @NotNull LocaleManager createLocaleManager(final @NotNull RPGPlugin plugin);
